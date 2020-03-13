@@ -13,17 +13,17 @@ body {
 }
 
 .zone {
-    color:#FFF;
-    font-size:2em;
-    border-radius:4px;
+    color: #FFF;
+    font-size: 2em;
+    border-radius: 4px;
     transition: all 0.3s linear;
 }
 
 .zone:hover {
-    -webkit-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -moz-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    -o-box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
-    box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+    -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 
 /***********************************************************************
@@ -82,16 +82,16 @@ a {
     After setting these we see that the layout is not fit to full width, so we set it to 100%.
 */
 .sticky {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
 }
 
 /***********************************************************************
  *  Cover
  **********************************************************************/
- /*
+/*
     We use flex since we want to keep things simple (just center content).
     After setting flex, justify-content centers content horizontal (X axis) within container and align-items centers vertical (Y axis)
     finally, vh is "view height", and from 0%-100% describes how much of the screen browser to fill out. 
@@ -111,8 +111,8 @@ rem = relative to font-size of root element. This is since we've created differe
 so this will automatically change this as well
 */
 .cover {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
 /*
@@ -127,7 +127,7 @@ so this will automatically change this as well
     font-weight: bold;
 }
 
-.coverText > h1 {
+.coverText>h1 {
     color: white;
     font-size: 40px;
 }
@@ -160,7 +160,7 @@ We want to make sure image fills entire box so we set width 100%.
 We just want to manipulate images within the class box, so we set it with the below syntax.
 */
 
-.card > img {
+.card>img {
     max-width: 100%;
     height: auto;
 }
@@ -176,7 +176,7 @@ We just want to manipulate images within the class box, so we set it with the be
 /*
     We set the padding around the text within the card (unlike the image which should be spread to 100% width)
 */
-.card > .text {
+.card>.text {
     padding: 0 20px 20px;
 }
 
@@ -217,3 +217,24 @@ footer p {
     background: #2d3436;
 }
 
+/***********************************************************************
+ *  Form
+ **********************************************************************/
+input,
+textarea,
+select,
+button {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 100%;
+    border-radius: 5px;
+}
+textarea {
+    resize: none;
+}
+.form_part {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

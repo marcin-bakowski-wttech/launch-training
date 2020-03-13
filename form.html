@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Give All Your Private Data To A Shady Company</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script type="text/javascript">
+    function formSubmit(event) {
+        event.preventDefault();
+        window.dataLayer = {};
+        email = document.getElementById("email").value;
+        window.dataLayer.email = email;
+        console.log(window.dataLayer);
+        //_satellite.track("formSubmit");
+        document.getElementById("thankYou").innerHTML="Thank you. We are now one step closer to full world domination."
+        document.getElementById("email").value = "";
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="zone blue sticky">
+        <ul class="main-nav">
+            <li><a href="">About</a></li>
+            <li><a href="">Products</a></li>
+            <li><a href="">Our Team</a></li>
+            <li class="push"><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <img class="cover" src="img/cover.jpg">
+        <div class="coverText">
+            <h1>Want to share your most sensitive private data with a shady company? You have come to the right URL!
+            </h1>
+            <form action="#"  onsubmit="formSubmit(event)">
+                <div class="form_part">
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" required placeholder="Give us your email"
+                        oninvalid="this.setCustomValidity('You wanted to trick us. Give us a valid email NOW.')"
+                        oninput="this.setCustomValidity('')">
+                </div>
+                <div class="form_part">
+                    <label for="sensitive">Other sensitive data for CDP to remember for all eternity:</label><br>
+                    <textarea type="text" name="sensitive" id="sensitive"
+                        placeholder="Religion? Political opinions? Health records? Full genome? We dont't really care as long as it's long and sensitive. The more the merrier. Come on, share it with us!"></textarea>
+                </div>
+                <input type="submit">
+            </form>
+            <p id="thankYou"></p>
+        </div>
+    </div>
+    <footer class="zone">
+        <p>2019 Assaf Elovic All right reserved. For more articles visit www.assafelovic.com</p>
+    </footer>
+    </div>
+</body>
+
+</html>
